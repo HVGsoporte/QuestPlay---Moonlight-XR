@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Necesario para listar las apps instaladas en las gafas y poder comprobar/lanzar Moonlight XR -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="QuestPlay"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.oculus.supportedDevices"
+            android:value="all" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden|uiMode|density|smallestScreenSize|screenLayout|layoutDirection|navigation"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
